@@ -1,0 +1,34 @@
+
+
+
+<div>
+    <h1 class="text-center text-primary mb-4">Product  List </h1>
+    <p class="text-center text-danger">{{deletemsg}}</p>
+    <table class=" border-primary">
+    
+        <tbody>
+            <tr>
+                <th>Product image</th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Color</th>
+                <th>Product Category</th>
+                <th>Product Description</th>
+                <th class="text-danger">Product Delete</th>
+                <th class="text-warning">Edit Product</th>
+                
+            </tr>
+            <tr *ngFor="let item of products">
+                <td><img src="{{item.image}}" alt="deleted" /></td>
+                <td>{{item.name|titlecase}}</td>
+                <td>{{item.price|currency:'USD'}}</td>
+                <td>{{item.color|titlecase}}</td>
+                <td>{{item.category|titlecase}}</td>
+                <td>{{item.description}}</td>
+                <td><button type="button" class="btn btn-danger delbtn" (click)="deletepro(item.id)" ><fa-icon [icon]="deleteicon"></fa-icon></button></td>
+                <td><button type="button" class="btn btn-warning" (click)="gotoupdatepro(item.id)" ><fa-icon [icon]="editicon"></fa-icon></button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>

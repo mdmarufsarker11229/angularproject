@@ -1,0 +1,93 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+
+    <div class="container">
+        <div>
+            <a class="navbar-brand" [routerLink]="['/home']">MHcommerce</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+       
+        <div [ngSwitch]="menutype">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul *ngSwitchCase="'default'" class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" [routerLink]="['/home']" >Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/seller_auth']" >Seller</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link " [routerLink]="['/userauth']">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " (click)="cantopencartpage()">Cart({{cartitems}})</a>
+                    </li>
+                </ul>
+
+                <!-- menu type for seller  -->
+                <ul *ngSwitchCase="'seller'" class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" [routerLink]="['/sellerhome']">Product List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/selleraddproduct']" >Add Product</a>
+                    </li>
+    
+                    <li class="nav-item">
+                        <a class="nav-link pointeradd" (click)="sellerlogout()">Logout </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"><fa-icon [icon]="usericon"></fa-icon>{{sellername|titlecase}}</a>
+                    </li>
+                </ul>
+                <!-- menu type for user  -->
+                <ul *ngSwitchCase="'user'" class="navbar-nav me-auto mb-2 mb-lg-0 ">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" [routerLink]="['/home']">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/seller_auth']" >Seller</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pointeradd" [routerLink]="['/myorder']">My Orders </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pointeradd" (click)="userlogout()">Logout </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#"><fa-icon [icon]="usericon"></fa-icon>{{username|titlecase}}</a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link "  [routerLink]="['/cart']">Cart({{cartitems}})</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div *ngIf="menutype!=='seller'" class="search_box">
+            <form class="d-flex" role="search" >
+                <input class="form-control me-2" #searchinput name="filterpro"  [(ngModel)]="filterpro" type="search" placeholder="Search" aria-label="Search">
+
+                <button class="btn btn-outline-success" (click)="gotosearchpage(searchinput.value)" type="submit">Search</button>
+            </form>
+            <div class="searchprofilter">
+                <ul *ngIf="filterpro">
+                    <li *ngFor="let item of searchproduct | filterproductpipe:filterpro">
+                        
+                       {{item.name}},
+                       
+                       
+                        
+                        <hr />
+                       
+                    </li>
+                </ul>
+               </div>
+        </div>
+        
+    </div>
+</nav>
+

@@ -1,0 +1,15 @@
+<div>
+  <h1>ADD PRODUCT HERE</h1>
+  <p class="text-primary text-center">{{addpromsg}}</p>
+  <div class="addproduct">
+    <form [formGroup]="addproductForm" (ngSubmit)="addproduct(addproductForm.value)">
+      <input class="form-control" type="text" formControlName="name" placeholder="Enter Product Name" /><br />
+      <input class="form-control" type="text" formControlName="price" placeholder="Enter Product Price" /><br />
+      <input class="form-control" type="text" formControlName="color" placeholder="Enter Product Color" /><br />
+      <input class="form-control" type="text" formControlName="category" placeholder="Enter Product Category" /><br />
+      <textarea class="form-control" type="text" formControlName="description" placeholder="Enter Product Description"></textarea><br />
+      <input class="form-control" type="text" formControlName="image" placeholder="Enter Product Image" /><br />
+      <button type="submit" class="btn btn-primary" [disabled]="!addproductForm.valid">Add Product</button>
+    </form>
+  </div>
+</div>

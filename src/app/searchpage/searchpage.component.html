@@ -1,0 +1,29 @@
+
+<div>
+    <h2 class="text-center text-primary mt-4 mb-4">Search Product </h2>
+    
+    <div>
+        <div class="row g-2"  >
+            <hr />
+            <div class="col-md-4 d-flex " *ngFor="let item of searchproduct" [routerLink]="['/showproductdetails/'+item.id]">
+                <div class="image">
+                    <img src="{{item.image}}" alt="deleted image" />
+                </div>
+                <div class="text text-left ms-2">
+                    <h5 class="text-capitalize mb-4">{{item.name}}</h5>
+                    
+                   <div class="text-capitalize ">
+                   <p [style.backgroundColor]="item.color" class="pro_color"></p>
+                    <b>Price: </b>${{item.price}}<br />
+                    <b>Description: </b>{{item.description}}<br />
+                   </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+            
+        </div>
+    </div>
+</div>

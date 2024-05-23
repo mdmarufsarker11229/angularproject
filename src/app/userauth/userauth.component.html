@@ -1,0 +1,63 @@
+<div class="signup_area" *ngIf="!showsignup"  >
+  <h1 class="text-center text-primary mt-4 mb-4">User SignUp Page </h1>
+  <p class="text-center text-primary mt-4">{{signupmsg}}</p>
+  <div class="signup_form">
+
+    <form [formGroup]="usersignupForm" (ngSubmit)="signupform(usersignupForm.value)">
+      <div class="mb-3">
+        <label for="username" class="form-label">User Name</label>
+        <input type="text" formControlName="username" class="form-control" id="username"
+          aria-describedby="usernameHelp">
+
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" formControlName="email" class="form-control" id="email"
+          aria-describedby="emailHelp">
+
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" formControlName="password" class="form-control" id="password">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Sign Up</button>
+     
+    </form>
+    <a (click)="openlogin()" >I have already an account? click to login </a>
+  </div>
+</div>
+
+
+
+
+<!-- user login page area  -->
+<div class="login_area" *ngIf="showsignup" >
+  <h1 class="text-center text-primary mt-4 mb-4">User Login Page </h1>
+  <p class="text-center text-danger mt-4">{{errormsg}}</p>
+  <div class="login_form">
+
+    <form [formGroup]="userloginForm" (ngSubmit)="loginform(userloginForm.value)">
+     
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" formControlName="email" class="form-control"  id="exampleInputEmail1"
+          aria-describedby="emailHelp">
+          <span *ngIf="!userloginForm.valid && userloginForm.touched">Enter valid email</span>
+      </div>
+      
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" formControlName="password" class="form-control" id="exampleInputPassword1">
+        <span *ngIf="!userloginForm.valid && userloginForm.touched">Enter valid password</span>
+      </div>
+
+      <button type="submit" class="btn btn-primary" [disabled]="!userloginForm.valid">Login </button>
+    </form>
+    <a  (click)="opensignup()" >I don't have an account? click to signup </a>
+  </div>
+</div>
+
+
+
+

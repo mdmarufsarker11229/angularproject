@@ -1,0 +1,15 @@
+<div class="mt-4">
+    <h1 class="text-center text-primary mb-4">UPDATE PRODUCT HERE</h1>
+    <p class="text-center text-warning">{{updatepromsg}}</p>
+    <div class="updateproduct mt-4">
+      <form [formGroup]="updateproductForm" (ngSubmit)="updatepro(updateproductForm.value)">
+        <input class="form-control" type="text" formControlName="name" placeholder="Enter Product Name" /><br />
+        <input class="form-control" type="text" formControlName="price" placeholder="Enter Product Price" /><br />
+        <input class="form-control" type="text" formControlName="color" placeholder="Enter Product Color" /><br />
+        <input class="form-control" type="text" formControlName="category" placeholder="Enter Product Category" /><br />
+        <textarea class="form-control" type="text" formControlName="description" placeholder="Enter Product Description"></textarea><br />
+        <input class="form-control" type="text" formControlName="image" placeholder="Enter Product Image" /><br />
+        <button type="submit" class="btn btn-primary">Update Product</button>
+      </form>
+    </div>
+  </div>

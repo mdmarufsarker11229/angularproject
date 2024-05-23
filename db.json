@@ -1,0 +1,129 @@
+{
+  "seller": [
+    {
+      "id": "60cd",
+      "username": "maruf sarker ",
+      "email": "maruf@gmail.com",
+      "password": "maruf123"
+    },
+    {
+      "id": "d5b7",
+      "username": "ashik",
+      "email": "ashik@gmail.com",
+      "password": "ashik123"
+    }
+  ],
+  "userauth": [
+    {
+      "id": "ffd4",
+      "username": "anik",
+      "email": "anik@gmail.com",
+      "password": "anik123"
+    },
+    {
+      "id": "c221",
+      "username": "simon",
+      "email": "simon@gmail.com",
+      "password": "simon123"
+    },
+    {
+      "id": "3193",
+      "username": "rasel",
+      "email": "rasel@gmail.com",
+      "password": "rasel123"
+    },
+    {
+      "id": "ab6c",
+      "username": "shohan",
+      "email": "shohan@gmai.com",
+      "password": "shohan123"
+    },
+    {
+      "id": "627b",
+      "username": "hurju",
+      "email": "sdfa",
+      "password": "sdf"
+    },
+    {
+      "id": "8fca",
+      "username": "sdfas",
+      "email": "sdfas",
+      "password": "sdfa"
+    }
+  ],
+  "product": [
+    {
+      "name": "redmi9pro",
+      "price": "2100",
+      "color": "blue",
+      "category": "mobile",
+      "description": "it's a good product \n",
+      "image": "https://fdn2.gsmarena.com/vv/pics/xiaomi/xiaomi-redmi-note-9-pro-global-0.jpg",
+      "id": "8b3e"
+    },
+    {
+      "id": "74ad",
+      "name": " iPhone 15",
+      "price": "1300",
+      "color": "pink",
+      "category": "mobile",
+      "description": "Released 2023, September 22,\n171g, 7.8mm thickness,\niOS 17, up to iOS 17.4,\n128GB/256GB/512GB storage, no card slot",
+      "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-15-1.jpg"
+    },
+    {
+      "name": "Mens T-shirt ",
+      "price": "435",
+      "color": "gray",
+      "category": " T-shirt",
+      "description": "Organic Ringspun Combed Compact Cotton,\n100% Cotton,\n",
+      "image": "https://fabrilife.com/products/646dc9d04f392-square.jpg",
+      "id": "2fa8"
+    },
+    {
+      "name": "HP 15s-du3611TU ",
+      "price": "5400",
+      "color": "red",
+      "category": "laptop",
+      "description": "Key Features\nMPN: 5B354PA,\nModel: 15s-du3611TU,\nProcessor: Intel Core i3-1125G4 (8M Cache, 2.00 GHz up to 3.70 GHz, 4 cores, 8 threads)\nRAM: 4GB DDR4 2666 MHz, Storage: 1TB HDD,\nDisplay: 15.6\" FHD (1920 x 1080),\nFeatures: Silver keyboard, Type-C,",
+      "image": "https://www.startech.com.bd/image/cache/catalog/laptop/hp-laptop/15s-du3022tu/15s-du3022tu-01-500x500.jpg",
+      "id": "2bf3"
+    },
+    {
+      "id": "2fa8",
+      "name": "Mens T-shirt ",
+      "price": "435",
+      "color": "gray",
+      "category": " T-shirt",
+      "description": "Organic Ringspun Combed Compact Cotton,\n100% Cotton,\n",
+      "image": "https://fabrilife.com/products/646dc9d04f392-square.jpg",
+      "productquatity": 1
+    }
+  ],
+  "cartproducts": [],
+  "orders": [
+    {
+      "id": "a446",
+      "email": "shimon@gmail.com",
+      "address": "west nakhalpara,tejgaon",
+      "contact": "223568",
+      "totalprice": 6540,
+      "userid": "c221"
+    },
+    {
+      "id": "5d99",
+      "email": "sdfas",
+      "address": "dsdf",
+      "contact": "sdf",
+      "totalprice": 6540,
+      "userid": "c221"
+    },
+    {
+      "id": "ffd4",
+      "email": "sdfsdf",
+      "address": "sdfsa",
+      "contact": "1253",
+      "totalprice": 4860,
+      "userid": "ffd4"
+    }
+  ]
+}

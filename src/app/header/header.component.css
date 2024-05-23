@@ -1,0 +1,25 @@
+
+.navbar-nav {
+    margin-left:300px;
+}
+.search_box {
+    margin-left:300px;
+}
+.pointeradd {
+    cursor:pointer;
+}
+.searchprofilter ul {
+    list-style:none;
+    position: absolute;
+    top:60px;
+}
+.searchprofilter ul li {
+    
+    margin-bottom:1px;
+}
+hr {
+    border-bottom:0.2px;
+    
+   
+    border-left:0px;
+}

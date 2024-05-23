@@ -1,0 +1,19 @@
+.checkout {
+    width:600px;
+    margin:100px auto;
+}
+input {
+    margin:10px 4px;
+}
+input[type='submit']{
+    background:blue;
+    color:white;
+}
+input.ng-invalid.ng-touched {
+border-color:red;
+}
+
+hr {
+    width:20%;
+    margin:10px auto;
+}

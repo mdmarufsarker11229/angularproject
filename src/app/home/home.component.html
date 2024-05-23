@@ -1,0 +1,63 @@
+<div class="home_area">
+
+  <div>
+    <h1 class="text-center text-primary mb-4 mt-4">POPULAR PRODUCTS </h1>
+
+    <div id="carouselExampleCaptions" class="carousel slide" >
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+          aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+          aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" 
+          aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" *ngFor="let item of productslider">
+          <img [routerLink]="['/showproductdetails/',item.id]" src="{{item.image}}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-primary-emphasis">{{item.name|titlecase}}</h5>
+            <!-- <p class="text-primary-emphasis">{{item.description|titlecase}}</p> -->
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- product list heare with row  -->
+  <div class="product_list container">
+    <h1 class="text-primary text-center mb-4">Popular Products </h1>
+    <div class="row g-4" >
+      <div class="col-md-3 " *ngFor="let item of popularproduct">
+        <div class="product_item border" >
+          <div class="image">
+            <img src="{{item.image}}" alt="deleted image" />
+          </div>
+          <div class="text">
+            <h3 class="text-capitalize">{{item.name}}</h3>
+            <b>${{item.price}}</b>
+          </div>
+          <div class="details">
+            <a (click)="getoprodetils(item.id)"><fa-icon [icon]="eyeicon"></fa-icon>View Details</a>
+            <a href="#"><fa-icon [icon]="carticon"></fa-icon>Add to Cart </a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+</div>

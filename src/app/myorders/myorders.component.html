@@ -1,0 +1,32 @@
+
+<h2 *ngIf="ordereditems.length===0"  class="text-center text-primary" >You have no orderd yet </h2>
+
+
+<div class="myorder p-4" *ngIf="ordereditems.length>0">
+    <h2 class="text-center text-primary mb-4">My Orders </h2>
+<div class="ordertable mt-4">
+    <p class="text-center text-danger">{{cancelmsg}}</p>
+    <table class="table table-bordered ">
+        <tbody>
+            <tr>
+                <th>Order</th>
+                <th>Order Id</th>
+                <th>Price</th>
+                <th>Status</th>
+                <th>User Id</th>
+                <th>Action</th>
+            </tr>
+        
+            <tr *ngFor="let item of ordereditems ">
+                <td><img src="https://www.shutterstock.com/image-vector/shopping-cart-vector-icon-flat-260nw-1690453492.jpg" alt="delted" /></td>
+                <td>{{item.id}}</td>
+                <td>{{item.totalprice|currency:'USD'}}</td>
+                <td>in process</td>
+                <td>{{item.userid}}</td>
+                <td><button type="button " class="btn btn-danger" (click)="cancelorder(item.id)">Cancel Order</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+ 
+</div>

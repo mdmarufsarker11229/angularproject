@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.navbar-brand {
+  
+    margin-right:0px;
+    margin-left:0px;
+    padding-right:0px;
+    padding-left:0px;
+    
+}
+.container {
+    max-width: 1484px;
+}
+

@@ -1,0 +1,22 @@
+<div class="text-center p-4">
+    <h2 class="text-primary">CheckOut Page </h2>
+    <hr />
+    <p class="text-center text-primary mt-4">{{ordermsg}}</p>
+<div class="checkout d-flex justify-content-between gap-4"  >
+    <div class="address">
+        <h4 class="mb-4 text-secondary">Add shipping address</h4>
+        <form [formGroup]="shippingForm" (ngSubmit)="submitform(shippingForm.value)">
+            <input type="email" class="form-control" formControlName="email" placeholder="Enter your Email" />
+            <input type="text" class="form-control" formControlName="address"  placeholder="Enter your Address"/>
+            <textarea type="text" class="form-control" formControlName="contact"  placeholder="Enter Contact details"></textarea>
+            <input type="submit" class="form-control" value="Order Now" [disabled]="!shippingForm.valid" />
+            
+        </form>
+    </div>
+    <div class="amount">
+        <h4 class="text-primary">Total Amount: {{totalprice|currency:'USD'}}</h4>
+        <b class="text-success">Payment methode: Cash on Delivery</b>
+    </div>
+    
+</div>
+</div>
